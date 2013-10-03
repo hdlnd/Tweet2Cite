@@ -1,4 +1,7 @@
 Citation::Application.routes.draw do
+
+  get 'about' => 'generate#about'
+  get 'contact' => 'generate#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
