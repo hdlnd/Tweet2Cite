@@ -1,5 +1,27 @@
     <div id="wrap">
+<<<<<<< HEAD
       <%= render 'navbar' %>
+=======
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand skm" href="/index.html">Tweet2Cite</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a id="about_page" href="/about.html">About</a></li>
+              <li><a id="contact_page" href="/contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+>>>>>>> 34c9eeca5ed6ca29d3b43c55b8ac065f76c1d1d4
 
       <!-- Begin page content -->
       <div class="container">
