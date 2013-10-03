@@ -2,6 +2,7 @@ Citation::Application.routes.draw do
 
   get 'about' => 'generate#about'
   get 'contact' => 'generate#contact'
+  post 'gettweet/:id' => 'generate#gettweet'
   # The priority is based upon order of creation:
   # first created -> highest priority.
   

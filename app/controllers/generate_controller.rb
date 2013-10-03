@@ -7,5 +7,9 @@ class GenerateController < ApplicationController
   
   def contact
   end
-  
+
+  def gettweet
+    @url = params[:id]
+
+  end
 end
