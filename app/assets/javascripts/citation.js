@@ -24,7 +24,6 @@ $(document).ready(function(){
                 //dataType: "json",
                 success: function(data){
                     //$('#tweet-div').html(data.html);
-                    console.log(data);
 
                     var t_date_raw = data.created_at;
                     var t_author_fullname = data.user.name;
