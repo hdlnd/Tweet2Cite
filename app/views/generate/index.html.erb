@@ -1,0 +1,59 @@
+    <div id="wrap">
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand skm" href="/index.html">Tweet2Cite</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+       
+        <div class="page-header">
+          <h1>Tweet2Cite</h1>
+        </div>
+        
+        <p class="lead">A quick, easy, and free citation generator that converts Tweets into, properly formatted MLA and APA, citations. Paste a link to the Tweet you want to cite in the field below, click 'Go', and you're on your way!</p>
+        
+        <div class="cite-input">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input type="url" id="submit-form-url" class="form-control" placeholder="Paste Tweet link here...">
+                <span class="input-group-btn">
+                  <button id="submit" class="btn btn-success" type="submit">Go!</button>
+                </span>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div>
+
+        <div id="tweet-div" style="display: none;"></div>
+        <div id="citations" class="lead" style="display: none;">
+          <h2>MLA:</h2>
+          <div id="mla-citation"></div>
+          <h2>APA:</h2>
+          <div id="apa-citation"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Special thanks to: <a href="https://twitter.com/sferik">@sferik</a>, <a href="https://twitter.com/avand">@avand</a> and <a href="https://twitter.com/gkoberger">@gkoberger</a></p>
+      </div>
+    </div>
