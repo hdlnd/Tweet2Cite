@@ -61,7 +61,7 @@ $(document).ready(function(){
                     var w_title = '|title= Tweet Number ' + tweet_id;
                     var w_url = '|url= ' + url;
                     var w_author = '|author= ' + t_author_fullname;
-                    var w_date = '|date= '+ 
+                    //var w_date = '|date= '+ 
                 
                 //create variables of citation strings for MLA and APA
                     mla_citation = mla_name+'"'+t_content+'". '+mla_date+" Tweet";
