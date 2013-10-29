@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('#submit').submit(function(){
+    $('#submit').submit(function(e){
+        e.preventDefault();
         mixpanel.track('Tweet Submitted');
         var url = $('#submit-form-url').val();
         if (url==""){
