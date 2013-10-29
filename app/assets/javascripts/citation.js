@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#submit').click(function(){
+    $('#submit').submit(function(){
         mixpanel.track('Tweet Submitted');
         var url = $('#submit-form-url').val();
         if (url==""){
@@ -16,7 +16,7 @@ $(document).ready(function(){
             });
 
             $('#submit-form-url').val('');
-            //manipulate tweet link to make it a Twitcher compatible link
+            //manipulate tweet link to make it a Twitter API compatible
             var tweet_url_arr = url.split('/');
             var gettweet_url = "/gettweet/"+tweet_url_arr[5];
 
@@ -49,6 +49,9 @@ $(document).ready(function(){
                 //create variables of citation strings for MLA and APA
                     mla_citation = mla_name+'"'+t_content+'". '+mla_date+" Tweet";
                     apa_citation = apa_name+apa_date+t_content+" [Twitter post]. "+"Retrieved from "+url;
+                
+
+
                 //present the citations to the user
                     $('div#mla-citation').html(mla_citation);
                     $('div#apa-citation').html(apa_citation);
@@ -57,7 +60,6 @@ $(document).ready(function(){
 
                 }
             });
-            //grab data, and store into tweet data variables, from Twitcher feed
              
         }
     })
