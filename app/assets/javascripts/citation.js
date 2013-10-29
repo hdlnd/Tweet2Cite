@@ -6,7 +6,6 @@ $(document).ready(function(){
             //$(".controls").addClass("error");
         }
         else {
-            //$("#tweet_div").show();
             $.ajax({
                 url: "https://api.twitter.com/1/statuses/oembed.json?url="+url,
                 dataType: "jsonp",
@@ -16,7 +15,7 @@ $(document).ready(function(){
             });
 
             $('#submit-form-url').val('');
-            //manipulate tweet link to make it a Twitter API compatible
+            //manipulate tweet link to make it Twitter API compatible
             var tweet_url_arr = url.split('/');
             var gettweet_url = "/gettweet/"+tweet_url_arr[5];
 
