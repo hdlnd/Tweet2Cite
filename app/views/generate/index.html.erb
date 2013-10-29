@@ -9,23 +9,26 @@
           <h1>Tweet2Cite</h1>
         </div>
         
-        <p class="lead">A quick, easy, and free citation generator that converts Tweets into, properly formatted MLA and APA, citations. Paste the <a href="https://support.twitter.com/articles/80586-linking-to-an-individual-tweet">URL</a> of the Tweet you want to cite in the field below, click 'Go', and you're on your way!</p>
+        <div class="row">
+          <p class="lead col-sm-10 col-sm-offset-1">A quick, easy, and free citation generator that converts Tweets into, properly formatted MLA and APA, citations. Paste the <a href="https://support.twitter.com/articles/80586-linking-to-an-individual-tweet">URL</a> of the Tweet you want to cite in the field below, tap 'Convert!', and you're on your way!</p>
+        </div>
         
         <div class="cite-input">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="input-group">
-                <input type="url" id="submit-form-url" class="form-control" placeholder="Paste Tweet URL here...">
-                <span class="input-group-btn">
-                  <button id="submit" class="btn btn-success" type="submit">Go!</button>
-                </span>
-              </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
+            <form class="form-inline" role="form">
+              <div class="form-group col-sm-6 col-sm-offset-1">
+                <label class="sr-only" for="submit-form-url">Paste Tweet URL here</label>
+                <input type="url" class="form-control" id="submit-form-url" placeholder="Paste Tweet URL here...">
+              </div>
+              <div class="col-sm-2 col-md-2">           
+                <button id="submit" type="submit" class="btn btn-success col-xs-12">Convert!</button>
+              </div>
+            </form>
           </div><!-- /.row -->
         </div>
 
-        <div id="tweet-div" style="display: none;"></div>
-        <div id="citations" class="lead" style="display: none;">
+        <div id="tweet-div" class="col-sm-10 col-sm-offset-1" style="display: none;"></div>
+        <div id="citations" class="lead col-sm-10 col-sm-offset-1" style="display: none;">
           <h2>MLA:</h2>
           <div id="mla-citation"></div>
           <h2>APA:</h2>
