@@ -35,8 +35,8 @@ $(document).ready(function(){
                     var t_author_handle = data.user.screen_name;
                     var t_content = data.text;
 
-                    var t_date_moment = moment(t_date_raw, "ddd MMM DD HH:mm:ss ZZ YYYY");
-                    var mla_date = moment(t_date_moment).format("DD MMM YYYY, HH:mm") + "UTC.";
+                    var t_date_moment = moment.utc(t_date_raw, "ddd MMM DD HH:mm:ss ZZ YYYY");
+                    var mla_date = moment.(t_date_moment).format("DD MMM YYYY, HH:mm") + " UTC.";
 
                         
 
