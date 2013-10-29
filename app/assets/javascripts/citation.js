@@ -68,7 +68,7 @@ $(document).ready(function(){
                     apa_citation = apa_name+apa_date+t_content+" [Twitter post]. "+"Retrieved from "+url;
                 
                 //create variables of citation strings for Wikipedia 
-                    wiki_citation = 
+                    //wiki_citation = 
 
                 //present the citations to the user
                     $('div#mla-citation').html(mla_citation);
