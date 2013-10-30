@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#submit').submit(function(e){
         e.preventDefault();
-        mixpanel.track('Tweet Submitted');
+        mixpanel.track('Tweet Submitted'); //Mixpanel Tweet Submitted Event
         var url = $('#submit-form-url').val();
         if (url==""){
             //$(".controls").addClass("error");
@@ -24,6 +24,7 @@ $(document).ready(function(){
             var tweet_id = tweet_url_arr[5];
             var gettweet_url = "/gettweet/"+tweet_id;
 
+            //Query the Twitter API for Tweet Data
             $.ajax({
                 url: gettweet_url,
                 //dataType: "json",
@@ -64,13 +65,6 @@ $(document).ready(function(){
                     var w_accessdate = '|accessdate= ' + moment().format('DD MMMM YYYY');
                     var w_quote = ' |quote= ' + t_content;
                     var w_work = ' |work= [[Twitter]] }}</ref>'     
-
-                //legacy code, remove after test
-                    //var t_date_arr = t_date_raw.split(' ');
-                    //var t_time_arr = t_date_arr[3].split(':');
-                    //var mla_time = t_time_arr[0]+':'+t_time_arr[1]+' UTC. ';
-                    //var mla_date = t_date_arr[2]+' '+t_date_arr[1]+' '+t_date_arr[5]+', '+mla_time;
-                    //var apa_date = '('+t_date_arr[5]+', '+t_date_arr[1]+' '+t_date_arr[2]+'). ';
                 
                 //create variables of citation strings for MLA and APA
                     mla_citation = mla_name+'"'+t_content+'". '+mla_date+" Tweet";
