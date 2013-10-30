@@ -1,6 +1,6 @@
     <div id="wrap">
       <%= render 'navbar' %>
-    <script type="text/javascript">mixpanel.track('App Loaded');</script>
+      <script type="text/javascript">mixpanel.track('App Loaded');</script>
 
       <!-- Begin page content -->
       <div class="container">
@@ -26,19 +26,25 @@
             </form>
           </div><!-- /.row -->
         </div>
-
-        <div id="tweet-div" class="col-sm-10 col-sm-offset-1" style="display: none;"></div>
-        <div id="citations" class="lead col-sm-10 col-sm-offset-1" style="display: none;">
-          <h2>MLA:</h2>
-          <div id="mla-citation" class="v-citation"></div>
-          <h2>APA:</h2>
-          <div id="apa-citation" class="v-citation"></div>
-          <h2>Wikipedia:</h2>
-          <div id="wiki-citation" class="v-citation"></div>
+        <div class="row">
+          <div id="tweet-div" class="col-sm-10 col-sm-offset-1" style="display: none;"></div>
+          <div id="citations" class="lead col-sm-10 col-sm-offset-1" style="display: none;">
+            <h2>MLA:</h2>
+            <div id="mla-citation" class="v-citation"></div>
+            <h2>APA:</h2>
+            <div id="apa-citation" class="v-citation"></div>
+            <h2>Wikipedia:</h2>
+            <div id="wiki-citation" class="v-citation"></div>
+          </div>
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-4">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tweet2cite.com" data-via="tweet2cite" data-dnt="true">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
         </div>
-
-      </div>
-    </div>
+      </div><!-- /.container -->
+    </div><!-- /.wrap -->
 
     <div id="footer">
       <div class="container">
