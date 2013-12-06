@@ -39,9 +39,9 @@ $(document).ready(function(){
                 //make 'created_at' more useful
                     var t_date_moment = moment.utc(t_date_raw, "ddd MMM DD HH:mm:ss ZZ YYYY");
 
-                //make name able to be reordered
+                //make name able to be reordered and manipulated
                     var author_name_arr = t_author_fullname.split(' ');
-                
+
                 //variables needed for mla citation format
                     var mla_date = moment.utc(t_date_moment).format("DD MMM YYYY, HH:mm") + " UTC.";
                     var mla_name = 0
@@ -54,7 +54,14 @@ $(document).ready(function(){
 
                 //variables needed for apa citation format 
                     var apa_date = moment.utc(t_date_moment).format("(YYYY, MMM DD).")
-                    var apa_name = t_author_handle+'. ';
+                    var apa_name = 0
+                    if (author_name_arr.length > 2 || author_name_arr.length <= 1) {
+                        apa_name = t_author_fullname+" ["+t_author_handle+"]. ";
+                        } 
+                    else {
+                        apa_name = author_name_arr[1]+", "+t_author_fullname[0]+". ["+t_author_handle+"]. ";
+                    }
+
                    
                 //variables for Wikimedia citation format
                     var w_name = '<ref name="' + t_author_handle + tweet_id + '">{{cite web';
@@ -68,7 +75,7 @@ $(document).ready(function(){
                 
                 //create variables of citation strings for MLA and APA
                     mla_citation = mla_name+'"'+t_content+'". '+mla_date+" Tweet";
-                    apa_citation = apa_name+apa_date+t_content+" [Twitter post]. "+"Retrieved from "+url;
+                    apa_citation = apa_name+apa_date+" "+t_content+" [Tweet]. "+"Retrieved from "+url;
                 
                 //create variables of citation strings for Wikipedia 
                     wiki_citation = w_name + w_title + w_url + w_author + w_date + w_accessdate + w_quote + w_work
