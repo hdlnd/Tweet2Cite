@@ -9,7 +9,7 @@ $(document).ready(function(){
         else {
             //embed Tweet for verification
             $.ajax({
-                url: "https://api.twitter.com/1/statuses/oembed.json?url="+url,
+                url: "https://publish.twitter.com/oembed?url="+url,
                 dataType: "jsonp",
                 success: function(data){
                     $('#tweet-div').html(data.html);
