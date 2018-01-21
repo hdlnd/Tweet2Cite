@@ -10,7 +10,7 @@ $(document).ready(function(){
             //embed Tweet for verification
             $.ajax({
                 url: "https://publish.twitter.com/oembed?url="+url,
-                dataType: "jsonp",
+                dataType: "json",
                 success: function(data){
                     $('#tweet-div').html(data.html);
                 }
